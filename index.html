@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Human Verification</title>
-</head>
-<body style="margin: 0; padding: 0;">
+<!-- LOCKER BUTTON -->
+<button onclick="openLocker()" class="btn btn-primary">🔓 Get Full Access</button>
 
-  <script type="text/javascript">
-    var KjLbf_byf_JWZXvc = { "it": 4459847, "key": "1a828" };
-  </script>
-  <script src="https://d2v7l2267atlz5.cloudfront.net/44cc664.js"></script>
+<!-- MODAL CONTAINER -->
+<div id="locker-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#000c;z-index:9999;">
+  <div style="max-width:600px;margin:80px auto;background:#fff;border-radius:8px;padding:20px;">
+    <iframe src="https://soufi2001.github.io/ai-locker/" width="100%" height="600" style="border:0;"></iframe>
+    <div class="text-center mt-3">
+      <button onclick="closeLocker()" class="btn btn-danger">Close</button>
+    </div>
+  </div>
+</div>
 
-</body>
-</html>
+<!-- JS -->
+<script>
+function openLocker() {
+  document.getElementById("locker-modal").style.display = "block";
+}
+function closeLocker() {
+  document.getElementById("locker-modal").style.display = "none";
+}
+</script>
